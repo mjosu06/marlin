@@ -41,7 +41,7 @@
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_ULTIMAKER
+  #define MOTHERBOARD 301
 #endif
 
 // Define this to set a custom name for your generic Mendel,
@@ -236,22 +236,24 @@ If it stays longer than _PERIOD, it means the thermistor temperature
 cannot catch up with the target, so something *may be* wrong. Then, to be on the
 safe side, the system will he halt.
 
-Bear in mind the count down will just start AFTER the first time the 
-thermistor temperature is over the target, so you will have no problem if
-your extruder heater takes 2 minutes to hit the target on heating.
+During initial heatup this feature will measure for how long the current temperature
+takes to raise 1 degree. If it takes longer than _START_PERIOD seconds then the
+system will halt.
 
 */
 // If you want to enable this feature for all your extruder heaters,
 // uncomment the 2 defines below:
 
 // Parameters for all extruder heaters
-//#define THERMAL_RUNAWAY_PROTECTION_PERIOD 40 //in seconds
-//#define THERMAL_RUNAWAY_PROTECTION_HYSTERESIS 4 // in degree Celsius
+#define THERMAL_RUNAWAY_PROTECTION_START_PERIOD 20
+#define THERMAL_RUNAWAY_PROTECTION_PERIOD 20 //in seconds
+#define THERMAL_RUNAWAY_PROTECTION_HYSTERESIS 4 // in degree Celsius
 
 // If you want to enable this feature for your bed heater,
 // uncomment the 2 defines below:
 
 // Parameters for the bed heater
+//#define THERMAL_RUNAWAY_PROTECTION_BED_START_PERIOD 40
 //#define THERMAL_RUNAWAY_PROTECTION_BED_PERIOD 20 //in seconds
 //#define THERMAL_RUNAWAY_PROTECTION_BED_HYSTERESIS 2 // in degree Celsius
 //===========================================================================
