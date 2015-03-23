@@ -2364,7 +2364,6 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
 #define X_STEP_PIN 37
 #define X_DIR_PIN 48
 #define X_MIN_PIN 12
-#define X_MAX_PIN 24
 #define X_ENABLE_PIN 29
 #define X_MS1_PIN 40
 #define X_MS2_PIN 41
@@ -2372,7 +2371,6 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
 #define Y_STEP_PIN 36
 #define Y_DIR_PIN 49
 #define Y_MIN_PIN 11
-#define Y_MAX_PIN 23
 #define Y_ENABLE_PIN 28
 #define Y_MS1_PIN 69
 #define Y_MS2_PIN 39
@@ -2380,7 +2378,6 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
 #define Z_STEP_PIN 35
 #define Z_DIR_PIN 47
 #define Z_MIN_PIN 10
-#define Z_MAX_PIN 30
 #define Z_ENABLE_PIN 27
 #define Z_MS1_PIN 68
 #define Z_MS2_PIN 67
@@ -2411,9 +2408,12 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
 #define E1_MS2_PIN 64
 
 #ifdef MINI-RAMBO
-#define MOTOR_CURRENT_PWM_XY_PIN 44
+#define X_MAX_PIN 30
+#define Y_MAX_PIN 24
+#define Z_MAX_PIN 23
+#define MOTOR_CURRENT_PWM_XY_PIN 46
 #define MOTOR_CURRENT_PWM_Z_PIN 45
-#define MOTOR_CURRENT_PWM_E_PIN 46
+#define MOTOR_CURRENT_PWM_E_PIN 44
 //Motor current PWM conversion, PWM value = MotorCurrentSetting * 255 / range
 #define MOTOR_CURRENT_PWM_RANGE 2000
 #define DEFAULT_PWM_MOTOR_CURRENT  {1300, 1300, 1250}
@@ -2455,6 +2455,9 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
 
 
 #else //Rambo
+#define X_MAX_PIN 24
+#define Y_MAX_PIN 23
+#define Z_MAX_PIN 30
 #define DIGIPOTSS_PIN 38
 #define DIGIPOT_CHANNELS {4,5,3,0,1} // X Y Z E0 E1 digipot channels to stepper driver mapping
 #define HEATER_0_PIN  9
