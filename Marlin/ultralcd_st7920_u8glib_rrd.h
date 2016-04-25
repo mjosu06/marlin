@@ -6,7 +6,7 @@
 #ifdef U8GLIB_ST7920
 
 //set optimization so ARDUINO optimizes this file
-#pragma GCC optimize (3)
+#pragma GCC optimize (0) //3
 
 #define ST7920_CLK_PIN  LCD_PINS_D4
 #define ST7920_DAT_PIN  LCD_PINS_ENABLE
