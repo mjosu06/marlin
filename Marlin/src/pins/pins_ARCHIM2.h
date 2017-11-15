@@ -46,12 +46,17 @@
 //
 // Limit Switches
 //
-#define X_MIN_PIN          14   // PD4 MIN ES1
-#define X_MAX_PIN          32   // PD10 MAX ES1
-#define Y_MIN_PIN          29   // PD6 MIN ES2
-#define Y_MAX_PIN          15   // PD5 MAX ES2
-#define Z_MIN_PIN          31   // PA7 MIN ES3
-#define Z_MAX_PIN          30   // PD9 MAX ES3
+#ifdef SENSORLESS_HOMING
+  #define X_MIN_PIN          59   // PA4 X_DIAG
+  #define Y_MIN_PIN          48   // PC15 Y_DIAG
+#else
+  #define X_MIN_PIN          14 //PD4 MIN ES1
+  #define Y_MIN_PIN          29 //PD6 MIN ES2
+#endif
+#define Z_MIN_PIN          31 //PA7 MIN ES3
+#define X_MAX_PIN          32 //PD10 MAX ES1
+#define Y_MAX_PIN          15 //PD5 MAX ES2
+#define Z_MAX_PIN          30 //PD9 MAX ES3
 
 //
 // Z Probe (when not Z_MIN_PIN)
