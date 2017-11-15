@@ -34,7 +34,7 @@
 #include "../../Marlin.h"
 
 // Based on selected port, use the proper configuration
-#if SERIAL_PORT == 0
+#if SERIAL_PORT == 0 || SERIAL_PORT == -1
   #define HWUART UART
   #define HWUART_IRQ UART_IRQn
   #define HWUART_IRQ_ID ID_UART
