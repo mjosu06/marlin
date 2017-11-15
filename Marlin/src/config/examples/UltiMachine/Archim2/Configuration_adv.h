@@ -1010,7 +1010,7 @@
   //#define Z2_CURRENT      1000
   //#define Z2_MICROSTEPS     16
 
-  #define E0_CURRENT         900
+  #define E0_CURRENT         720
   #define E0_MICROSTEPS       16
 
   #define E1_CURRENT         900
