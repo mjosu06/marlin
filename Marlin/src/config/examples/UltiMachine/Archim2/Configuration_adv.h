@@ -1102,7 +1102,13 @@
    *   stepperX.interpolate(0); \
    * }
    */
-  #define  TMC2130_ADV() {  }
+  #define  TMC2130_ADV() { \
+    stepperX.stealth_freq(0); \
+    stepperY.stealth_freq(0); \
+    stepperZ.stealth_freq(0); \
+    stepperE0.stealth_freq(0); \
+    stepperE1.stealth_freq(0); \
+  }
 
 #endif // HAVE_TMC2130
 
