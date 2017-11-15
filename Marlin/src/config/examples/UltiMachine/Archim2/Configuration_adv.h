@@ -1013,8 +1013,8 @@
   #define E0_CURRENT         900
   #define E0_MICROSTEPS       16
 
-  //#define E1_CURRENT      1000
-  //#define E1_MICROSTEPS     16
+  #define E1_CURRENT         900
+  #define E1_MICROSTEPS       16
 
   //#define E2_CURRENT      1000
   //#define E2_MICROSTEPS     16
