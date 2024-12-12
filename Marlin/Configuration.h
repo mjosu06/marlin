@@ -33,7 +33,7 @@
 #define SERIAL_PORT 0
 
 // This determines the communication speed of the printer
-#define BAUDRATE 115200
+#define BAUDRATE 19200
 
 // This enables the serial port associated to the Bluetooth interface
 //#define BTENABLED              // Enable BT interface on AT90USB devices
@@ -104,7 +104,7 @@
 // 110 is Pt100 with 1k pullup (non standard)
 // 70 is 500C thermistor for Pico hot end
 
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 60
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_BED 0
@@ -481,8 +481,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {105.52, 105.52, 105.52, 117.25}  // default steps per unit for Ultimaker
-#define DEFAULT_MAX_FEEDRATE          {100, 100, 100, 25}    // (mm/sec)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {14.069333333333333333333333333333, 14.069333333333333333333333333333, 26.38, 117.25}  // default steps per unit for Ultimaker
+#define DEFAULT_MAX_FEEDRATE          {200, 200, 300, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {300,300,300,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          250   // X, Y, Z and E max acceleration in mm/s^2 for printing moves
